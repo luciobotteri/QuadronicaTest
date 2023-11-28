@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF197C5E2B1602DF00B438B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF197C5D2B1602DF00B438B1 /* AppDelegate.swift */; };
+		AF197C602B1602DF00B438B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF197C5F2B1602DF00B438B1 /* SceneDelegate.swift */; };
+		AF197C622B1602DF00B438B1 /* PlayersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF197C612B1602DF00B438B1 /* PlayersListVC.swift */; };
+		AF197C652B1602DF00B438B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF197C632B1602DF00B438B1 /* Main.storyboard */; };
+		AF197C672B1602E100B438B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF197C662B1602E100B438B1 /* Assets.xcassets */; };
+		AF197C6A2B1602E100B438B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF197C682B1602E100B438B1 /* LaunchScreen.storyboard */; };
+		AF197C722B16049A00B438B1 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF197C712B16049A00B438B1 /* FavoritesVC.swift */; };
+		AF2D69872B16359D00BB5E17 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2D69862B16359C00BB5E17 /* PlayerTableViewCell.swift */; };
+		AF2D69892B163E3600BB5E17 /* PlayersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2D69882B163E3600BB5E17 /* PlayersData.swift */; };
+		AF2D698B2B163E9A00BB5E17 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2D698A2B163E9A00BB5E17 /* Player.swift */; };
+		AF2D698D2B1648D800BB5E17 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2D698C2B1648D800BB5E17 /* FavoriteTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AF197C5A2B1602DF00B438B1 /* Test Quadronica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test Quadronica.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF197C5D2B1602DF00B438B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF197C5F2B1602DF00B438B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AF197C612B1602DF00B438B1 /* PlayersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersListVC.swift; sourceTree = "<group>"; };
+		AF197C642B1602DF00B438B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF197C662B1602E100B438B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF197C692B1602E100B438B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF197C6B2B1602E100B438B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF197C712B16049A00B438B1 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
+		AF2D69862B16359C00BB5E17 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
+		AF2D69882B163E3600BB5E17 /* PlayersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersData.swift; sourceTree = "<group>"; };
+		AF2D698A2B163E9A00BB5E17 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		AF2D698C2B1648D800BB5E17 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF197C572B1602DF00B438B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF197C512B1602DF00B438B1 = {
+			isa = PBXGroup;
+			children = (
+				AF197C5C2B1602DF00B438B1 /* Test Quadronica */,
+				AF197C5B2B1602DF00B438B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF197C5B2B1602DF00B438B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF197C5A2B1602DF00B438B1 /* Test Quadronica.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF197C5C2B1602DF00B438B1 /* Test Quadronica */ = {
+			isa = PBXGroup;
+			children = (
+				AF197C5D2B1602DF00B438B1 /* AppDelegate.swift */,
+				AF197C5F2B1602DF00B438B1 /* SceneDelegate.swift */,
+				AF2D698E2B165CEB00BB5E17 /* Model */,
+				AF2D698F2B165D0900BB5E17 /* Data */,
+				AF2D69902B165D2900BB5E17 /* Players List */,
+				AF2D69912B165D3D00BB5E17 /* Favorites */,
+				AF197C632B1602DF00B438B1 /* Main.storyboard */,
+				AF197C662B1602E100B438B1 /* Assets.xcassets */,
+				AF197C682B1602E100B438B1 /* LaunchScreen.storyboard */,
+				AF197C6B2B1602E100B438B1 /* Info.plist */,
+			);
+			path = "Test Quadronica";
+			sourceTree = "<group>";
+		};
+		AF2D698E2B165CEB00BB5E17 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF2D698A2B163E9A00BB5E17 /* Player.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF2D698F2B165D0900BB5E17 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AF2D69882B163E3600BB5E17 /* PlayersData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AF2D69902B165D2900BB5E17 /* Players List */ = {
+			isa = PBXGroup;
+			children = (
+				AF197C612B1602DF00B438B1 /* PlayersListVC.swift */,
+				AF2D69862B16359C00BB5E17 /* PlayerTableViewCell.swift */,
+			);
+			path = "Players List";
+			sourceTree = "<group>";
+		};
+		AF2D69912B165D3D00BB5E17 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				AF197C712B16049A00B438B1 /* FavoritesVC.swift */,
+				AF2D698C2B1648D800BB5E17 /* FavoriteTableViewCell.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF197C592B1602DF00B438B1 /* Test Quadronica */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF197C6E2B1602E100B438B1 /* Build configuration list for PBXNativeTarget "Test Quadronica" */;
+			buildPhases = (
+				AF197C562B1602DF00B438B1 /* Sources */,
+				AF197C572B1602DF00B438B1 /* Frameworks */,
+				AF197C582B1602DF00B438B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Test Quadronica";
+			productName = "Test Quadronica";
+			productReference = AF197C5A2B1602DF00B438B1 /* Test Quadronica.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF197C522B1602DF00B438B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					AF197C592B1602DF00B438B1 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = AF197C552B1602DF00B438B1 /* Build configuration list for PBXProject "Test Quadronica" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF197C512B1602DF00B438B1;
+			productRefGroup = AF197C5B2B1602DF00B438B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF197C592B1602DF00B438B1 /* Test Quadronica */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF197C582B1602DF00B438B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF197C6A2B1602E100B438B1 /* LaunchScreen.storyboard in Resources */,
+				AF197C672B1602E100B438B1 /* Assets.xcassets in Resources */,
+				AF197C652B1602DF00B438B1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF197C562B1602DF00B438B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF197C722B16049A00B438B1 /* FavoritesVC.swift in Sources */,
+				AF2D698D2B1648D800BB5E17 /* FavoriteTableViewCell.swift in Sources */,
+				AF197C622B1602DF00B438B1 /* PlayersListVC.swift in Sources */,
+				AF2D69892B163E3600BB5E17 /* PlayersData.swift in Sources */,
+				AF2D69872B16359D00BB5E17 /* PlayerTableViewCell.swift in Sources */,
+				AF2D698B2B163E9A00BB5E17 /* Player.swift in Sources */,
+				AF197C5E2B1602DF00B438B1 /* AppDelegate.swift in Sources */,
+				AF197C602B1602DF00B438B1 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AF197C632B1602DF00B438B1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF197C642B1602DF00B438B1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF197C682B1602E100B438B1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF197C692B1602E100B438B1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF197C6C2B1602E100B438B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF197C6D2B1602E100B438B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF197C6F2B1602E100B438B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CY3THQDJ45;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Test Quadronica/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "it.luciobotteri.Test-Quadronica";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF197C702B1602E100B438B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CY3THQDJ45;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Test Quadronica/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "it.luciobotteri.Test-Quadronica";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF197C552B1602DF00B438B1 /* Build configuration list for PBXProject "Test Quadronica" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF197C6C2B1602E100B438B1 /* Debug */,
+				AF197C6D2B1602E100B438B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF197C6E2B1602E100B438B1 /* Build configuration list for PBXNativeTarget "Test Quadronica" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF197C6F2B1602E100B438B1 /* Debug */,
+				AF197C702B1602E100B438B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF197C522B1602DF00B438B1 /* Project object */;
+}

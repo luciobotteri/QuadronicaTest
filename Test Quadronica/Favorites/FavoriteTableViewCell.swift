@@ -18,6 +18,8 @@ class FavoriteTableViewCell: UITableViewCell {
     @IBOutlet private weak var pgLabel: UILabel!
     @IBOutlet private weak var mvLabel: UILabel!
     @IBOutlet private weak var mfvLabel: UILabel!
+    @IBOutlet private weak var playerImageView: UIImageView!
+    
     
     private var player: Player?
     
@@ -29,7 +31,13 @@ class FavoriteTableViewCell: UITableViewCell {
     
     func configure(with player: Player) {
         self.player = player
-        nameLabel.text = player.name
-        teamLabel.text = player.team
+        nameLabel.text = player.playerName
+        teamLabel.text = player.teamAbbreviation
+        pgLabel.text = String(format:"%.2f", player.gamesPlayed)
+        mvLabel.text = String(format:"%.2f", player.averageGrade)
+        mfvLabel.text = String(format:"%.2f", player.averageFantaGrade)
+        if let imageData = player.imageData, let image = UIImage(data: imageData) {
+            playerImageView.image = image
+        }
     }
 }

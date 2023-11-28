@@ -18,6 +18,8 @@
 		AF2D69892B163E3600BB5E17 /* PlayersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2D69882B163E3600BB5E17 /* PlayersData.swift */; };
 		AF2D698B2B163E9A00BB5E17 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2D698A2B163E9A00BB5E17 /* Player.swift */; };
 		AF2D698D2B1648D800BB5E17 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2D698C2B1648D800BB5E17 /* FavoriteTableViewCell.swift */; };
+		AF6893252B165FB40013A53D /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6893242B165FB40013A53D /* NetworkLayer.swift */; };
+		AF6893272B166BA80013A53D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6893262B166BA80013A53D /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		AF2D69882B163E3600BB5E17 /* PlayersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersData.swift; sourceTree = "<group>"; };
 		AF2D698A2B163E9A00BB5E17 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		AF2D698C2B1648D800BB5E17 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		AF6893242B165FB40013A53D /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		AF6893262B166BA80013A53D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 			children = (
 				AF197C5D2B1602DF00B438B1 /* AppDelegate.swift */,
 				AF197C5F2B1602DF00B438B1 /* SceneDelegate.swift */,
+				AF6893262B166BA80013A53D /* Constants.swift */,
+				AF6893242B165FB40013A53D /* NetworkLayer.swift */,
 				AF2D698E2B165CEB00BB5E17 /* Model */,
 				AF2D698F2B165D0900BB5E17 /* Data */,
 				AF2D69902B165D2900BB5E17 /* Players List */,
@@ -185,10 +191,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF6893252B165FB40013A53D /* NetworkLayer.swift in Sources */,
 				AF197C722B16049A00B438B1 /* FavoritesVC.swift in Sources */,
 				AF2D698D2B1648D800BB5E17 /* FavoriteTableViewCell.swift in Sources */,
 				AF197C622B1602DF00B438B1 /* PlayersListVC.swift in Sources */,
 				AF2D69892B163E3600BB5E17 /* PlayersData.swift in Sources */,
+				AF6893272B166BA80013A53D /* Constants.swift in Sources */,
 				AF2D69872B16359D00BB5E17 /* PlayerTableViewCell.swift in Sources */,
 				AF2D698B2B163E9A00BB5E17 /* Player.swift in Sources */,
 				AF197C5E2B1602DF00B438B1 /* AppDelegate.swift in Sources */,

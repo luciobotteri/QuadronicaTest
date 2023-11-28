@@ -8,17 +8,20 @@
 import Foundation
 
 final class PlayersData {
+    
     static let shared = PlayersData()
     
     private init() {}
     
-    var players = [
-        Player(name: "Osimhen", team: "NAP"),
-        Player(name: "Lookman", team: "ATA"),
-        Player(name: "Vieri", team: "LAZ")
-    ]
+    var players = [Player]()
     
     var favorites: [Player] {
         players.filter(\.isFavorite)
+    }
+    
+    func addImageData(_ data: Data, id: Int) {
+        if let i = players.firstIndex(where: { $0.playerId == id }) {
+            players[i].imageData = data
+        }
     }
 }

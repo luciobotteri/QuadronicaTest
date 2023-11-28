@@ -22,28 +22,7 @@ class PlayersListVC: UIViewController {
         searchController.isActive ? filteredData : players
     }
     
-    let networkLayer = NetworkLayer()
-    
-    private func fetchPlayers() {
-        activityIndicator.startAnimating()
-        networkLayer.fetchPlayers { [weak self] result in
-            switch result {
-            case .success(let players):
-                PlayersData.shared.players = players.sorted()
-                DispatchQueue.main.async {
-                    self?.tableView?.reloadData()
-                    self?.activityIndicator.stopAnimating()
-                }
-            case .failure(let error):
-                // TODO: Gestire l'errore
-                DispatchQueue.main.async {
-                    self?.noResultsLabel.isHidden = false
-                    self?.noResultsLabel.text = error.localizedDescription
-                    self?.activityIndicator.stopAnimating()
-                }
-            }
-        }
-    }
+    private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +30,9 @@ class PlayersListVC: UIViewController {
         searchController.searchResultsUpdater = self
         searchController.searchBar.placeholder = Constants.Strings.searchPlaceholder
         navigationItem.searchController = searchController
+        
+        refreshControl.addTarget(self, action: #selector(fetchPlayers), for: .valueChanged)
+        tableView.addSubview(refreshControl)
         
         noResultsLabel.isHidden = true
         
@@ -60,6 +42,29 @@ class PlayersListVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+    }
+    
+    @objc private func fetchPlayers() {
+        activityIndicator.startAnimating()
+        NetworkLayer().fetchPlayers { [weak self] result in
+            switch result {
+            case .success(let players):
+                PlayersData.shared.players = players.sorted()
+                DispatchQueue.main.async {
+                    self?.tableView?.reloadData()
+                    self?.activityIndicator.stopAnimating()
+                    self?.refreshControl.endRefreshing()
+                }
+            case .failure(let error):
+                // TODO: Gestire l'errore
+                DispatchQueue.main.async {
+                    self?.noResultsLabel.isHidden = false
+                    self?.noResultsLabel.text = error.localizedDescription
+                    self?.activityIndicator.stopAnimating()
+                    self?.refreshControl.endRefreshing()
+                }
+            }
+        }
     }
 }
 

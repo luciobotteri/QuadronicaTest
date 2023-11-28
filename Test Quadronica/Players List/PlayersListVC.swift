@@ -29,7 +29,7 @@ class PlayersListVC: UIViewController {
         networkLayer.fetchPlayers { [weak self] result in
             switch result {
             case .success(let players):
-                PlayersData.shared.players = players
+                PlayersData.shared.players = players.sorted()
                 DispatchQueue.main.async {
                     self?.tableView?.reloadData()
                     self?.activityIndicator.stopAnimating()

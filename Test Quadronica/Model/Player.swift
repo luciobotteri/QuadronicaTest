@@ -30,3 +30,17 @@ final class Player: Codable {
         averageFantaGrade = try container.decode(Double.self, forKey: .averageFantaGrade)
     }
 }
+
+extension Player: Comparable {
+    static func < (lhs: Player, rhs: Player) -> Bool {
+        if lhs.teamAbbreviation == rhs.teamAbbreviation {
+            lhs.playerName < rhs.playerName
+        } else {
+            lhs.teamAbbreviation < rhs.teamAbbreviation
+        }
+    }
+    
+    static func == (lhs: Player, rhs: Player) -> Bool {
+        lhs.playerId == rhs.playerId
+    }
+}

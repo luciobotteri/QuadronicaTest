@@ -20,13 +20,18 @@ class FavoriteTableViewCell: UITableViewCell {
     @IBOutlet private weak var mfvLabel: UILabel!
     @IBOutlet private weak var playerImageView: UIImageView!
     
-    
     private var player: Player?
+    private var imageTask: Task<Void, Error>?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         roundedBackgroundView.layer.cornerRadius = 10
         leadingView.layer.cornerRadius = leadingView.frame.width/2
+    }
+    
+    override func prepareForReuse() {
+        imageTask?.cancel()
+        imageTask = nil
     }
     
     func configure(with player: Player) {
@@ -38,6 +43,17 @@ class FavoriteTableViewCell: UITableViewCell {
         mfvLabel.text = String(format:"%.2f", player.averageFantaGrade)
         if let imageData = player.imageData, let image = UIImage(data: imageData) {
             playerImageView.image = image
+        } else if let url = URL(string: player.imageURL) {
+            fetchImage(url: url, id: player.playerId)
+        }
+    }
+    
+    func fetchImage(url: URL, id: Int) {
+        imageTask = Task {
+            if let data = await NetworkLayer().fetchImageData(from: url) {
+                PlayersData.shared.addImageData(data, id: id)
+                playerImageView.image = UIImage(data: data)
+            }
         }
     }
 }

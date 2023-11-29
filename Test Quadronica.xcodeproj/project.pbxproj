@@ -20,6 +20,8 @@
 		AF2D698D2B1648D800BB5E17 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2D698C2B1648D800BB5E17 /* FavoriteTableViewCell.swift */; };
 		AF6893252B165FB40013A53D /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6893242B165FB40013A53D /* NetworkLayer.swift */; };
 		AF6893272B166BA80013A53D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6893262B166BA80013A53D /* Constants.swift */; };
+		AF68932A2B17148F0013A53D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = AF6893292B17148F0013A53D /* Realm */; };
+		AF68932C2B17148F0013A53D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF68932B2B17148F0013A53D /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF68932C2B17148F0013A53D /* RealmSwift in Frameworks */,
+				AF68932A2B17148F0013A53D /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,15 +76,14 @@
 			children = (
 				AF197C5D2B1602DF00B438B1 /* AppDelegate.swift */,
 				AF197C5F2B1602DF00B438B1 /* SceneDelegate.swift */,
-				AF6893262B166BA80013A53D /* Constants.swift */,
-				AF6893242B165FB40013A53D /* NetworkLayer.swift */,
+				AF68932F2B17830F0013A53D /* Network */,
 				AF2D698E2B165CEB00BB5E17 /* Model */,
 				AF2D698F2B165D0900BB5E17 /* Data */,
 				AF2D69902B165D2900BB5E17 /* Players List */,
 				AF2D69912B165D3D00BB5E17 /* Favorites */,
-				AF197C632B1602DF00B438B1 /* Main.storyboard */,
+				AF68932D2B1782F70013A53D /* Storyboards */,
+				AF68932E2B1783060013A53D /* Utils */,
 				AF197C662B1602E100B438B1 /* Assets.xcassets */,
-				AF197C682B1602E100B438B1 /* LaunchScreen.storyboard */,
 				AF197C6B2B1602E100B438B1 /* Info.plist */,
 			);
 			path = "Test Quadronica";
@@ -120,6 +123,31 @@
 			path = Favorites;
 			sourceTree = "<group>";
 		};
+		AF68932D2B1782F70013A53D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AF197C632B1602DF00B438B1 /* Main.storyboard */,
+				AF197C682B1602E100B438B1 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AF68932E2B1783060013A53D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AF6893262B166BA80013A53D /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		AF68932F2B17830F0013A53D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AF6893242B165FB40013A53D /* NetworkLayer.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,6 +164,10 @@
 			dependencies = (
 			);
 			name = "Test Quadronica";
+			packageProductDependencies = (
+				AF6893292B17148F0013A53D /* Realm */,
+				AF68932B2B17148F0013A53D /* RealmSwift */,
+			);
 			productName = "Test Quadronica";
 			productReference = AF197C5A2B1602DF00B438B1 /* Test Quadronica.app */;
 			productType = "com.apple.product-type.application";
@@ -164,6 +196,9 @@
 				Base,
 			);
 			mainGroup = AF197C512B1602DF00B438B1;
+			packageReferences = (
+				AF6893282B17148F0013A53D /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = AF197C5B2B1602DF00B438B1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -425,6 +460,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF6893282B17148F0013A53D /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF6893292B17148F0013A53D /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF6893282B17148F0013A53D /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		AF68932B2B17148F0013A53D /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF6893282B17148F0013A53D /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF197C522B1602DF00B438B1 /* Project object */;
 }

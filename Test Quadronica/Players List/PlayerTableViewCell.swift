@@ -18,15 +18,19 @@ class PlayerTableViewCell: UITableViewCell {
     @IBOutlet private weak var roundedBackgroundView: UIView!
     @IBOutlet private weak var playerImageView: UIImageView!
     
-    var imageTask: Task<Void, Error>?
-    
     private var player: Player?
+    private var imageTask: Task<Void, Error>?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         roundedBackgroundView.layer.cornerRadius = 10
         leadingView.layer.cornerRadius = leadingView.frame.width/2
         favoriteButton.setTitle("", for: .normal)
+    }
+    
+    override func prepareForReuse() {
+        imageTask?.cancel()
+        imageTask = nil
     }
     
     func configure(with player: Player) {
@@ -52,8 +56,10 @@ class PlayerTableViewCell: UITableViewCell {
     }
     
     @IBAction func favoriteAction(_ sender: UIButton) {
-        player?.isFavorite.toggle()
-        refreshFavoriteAppearance()
+        if let playerId = player?.playerId {
+            PlayersData.shared.toggleFavorite(playerId: playerId)
+            refreshFavoriteAppearance()
+        }
     }
     
     func refreshFavoriteAppearance() {
@@ -61,10 +67,5 @@ class PlayerTableViewCell: UITableViewCell {
         let symbolName = player.isFavorite ? "star.fill" : "star"
         favoriteButton.setImage(UIImage(systemName: symbolName), for: .normal)
         favoriteButton.tintColor = player.isFavorite ? .systemBlue : .systemGray
-    }
-    
-    override func prepareForReuse() {
-        imageTask?.cancel()
-        imageTask = nil
     }
 }

@@ -6,18 +6,23 @@
 //
 
 import Foundation
+import RealmSwift
 
-final class Player: Codable {
-    let playerId: Int
-    let playerName: String
-    let imageURL: String
-    let teamAbbreviation: String
-    let gamesPlayed: Int
-    let averageGrade: Double
-    let averageFantaGrade: Double
+final class Player: Object, Codable {
+    @Persisted var playerId: Int
+    @Persisted var playerName: String
+    @Persisted var imageURL: String
+    @Persisted var teamAbbreviation: String
+    @Persisted var gamesPlayed: Int
+    @Persisted var averageGrade: Double
+    @Persisted var averageFantaGrade: Double
     
-    var isFavorite = false
-    var imageData: Data?
+    @Persisted var isFavorite = false
+    @Persisted var imageData: Data?
+    
+    override class func primaryKey() -> String? {
+        "playerId"
+    }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -28,6 +33,10 @@ final class Player: Codable {
         gamesPlayed = try container.decode(Int.self, forKey: .gamesPlayed)
         averageGrade = try container.decode(Double.self, forKey: .averageGrade)
         averageFantaGrade = try container.decode(Double.self, forKey: .averageFantaGrade)
+    }
+    
+    override init() {
+        super.init()
     }
 }
 

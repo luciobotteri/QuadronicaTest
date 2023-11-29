@@ -36,7 +36,9 @@ class PlayersListVC: UIViewController {
         
         noResultsLabel.isHidden = true
         
-        fetchPlayers()
+        if players.isEmpty {
+            fetchPlayers()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,8 +51,9 @@ class PlayersListVC: UIViewController {
         NetworkLayer().fetchPlayers { [weak self] result in
             switch result {
             case .success(let players):
-                PlayersData.shared.players = players.sorted()
                 DispatchQueue.main.async {
+                    PlayersData.shared.realmSync(players.sorted())
+                    self?.noResultsLabel.isHidden = true
                     self?.tableView?.reloadData()
                     self?.activityIndicator.stopAnimating()
                     self?.refreshControl.endRefreshing()
